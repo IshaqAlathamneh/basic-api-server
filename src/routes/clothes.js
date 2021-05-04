@@ -46,7 +46,7 @@ function updateClothes(req, res) {
 function deleteClothes(req, res) {
     let id = parseInt(req.params.id);
     let deleted = clothesInstance.delete(id);
-    let msg = deleted ? 'Item is deleted': 'Item was not Found'
+    let msg = deleted ? 'Item is deleted' : 'Item was not Found';
     let statusCode = deleted ? 202 : 204;
     res.status(statusCode).json({
         msg: msg,

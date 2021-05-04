@@ -10,6 +10,7 @@ const clothesRouter = require('./routes/clothes');
 
 // Global Middleware
 app.use(logger);
+// app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(foodRouter);
